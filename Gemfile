@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'letter_opener'
 
 gem 'gravatar'
 gem 'will_paginate'

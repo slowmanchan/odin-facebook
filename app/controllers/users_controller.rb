@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @feed_items = current_user.feed.paginate(page: params[:page])
   end
 
   def updated
@@ -12,6 +13,6 @@ class UsersController < ApplicationController
 
   def destroy
   end
-  
+
 
 end
