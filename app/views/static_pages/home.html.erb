@@ -1,8 +1,10 @@
 <% if user_signed_in? %>
   <%= render 'shared/user_info' %>
+  <%= render 'shared/stats' %>
   <%= render 'shared/posts' %>
   <h1>Micropost Feed</h1>
   <%= render 'shared/feed' %>
+
 <% else %>
   <h1>Welcome to odin-facebook</h1>
   <%= link_to 'Sign up', new_user_registration_path %>

@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @feed_items = current_user.feed.paginate(page: params[:page])
+    @user = User.find(params[:id])
+    @feed_items = @user.feed.paginate(page: params[:page])
   end
 
   def updated
@@ -15,5 +16,18 @@ class UsersController < ApplicationController
   def destroy
   end
 
+  def following
+    @title = "Following"
+    @user = User.find(params[:id])
+    @users = @user.following.paginate(page: params[:page])
+    render 'show_follow'
+  end
+
+  def followers
+    @title = "Followers"
+    @user = User.find(params[:id])
+    @users = @user.followers.paginate(page: params[:page])
+    render 'show_follow'
+  end
 
 end

@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before action :user_signed_in?
+  before_action :user_signed_in?
 
   def index
   end

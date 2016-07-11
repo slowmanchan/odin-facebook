@@ -1,11 +1,6 @@
 <% provide(:title, 'Users') %>
 <ul>
-    <% @users.each do |user| %>
-    <li>
-      <%= gravatar_for(user) %>
-      <%= link_to user.email, user_path(user.id) %>
-    </li>
-    <% end %>
+  <li><%= render @users %></li>
 </ul>
 
 <%= will_paginate @users %>

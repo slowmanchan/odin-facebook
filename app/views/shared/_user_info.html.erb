@@ -1,4 +1,4 @@
-<% provide(:title, current_user.email) %>
+<% provide(:title, @user.email) %>
 
-<h1><%= current_user.email %></h1>
-<%= gravatar_for(current_user) %>
+<h1><%= @user.email %></h1>
+<%= gravatar_for(@user) %>
