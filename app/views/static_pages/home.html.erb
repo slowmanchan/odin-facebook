@@ -2,7 +2,7 @@
   <%= render 'shared/user_info' %>
   <%= render 'shared/stats' %>
   <%= render 'shared/posts' %>
-  <h1>Micropost Feed</h1>
+  <h1>Posts(<%= @feed_items.count %>)</h1>
   <%= render 'shared/feed' %>
 
 <% else %>

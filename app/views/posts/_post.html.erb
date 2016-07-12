@@ -2,4 +2,5 @@
   <%= link_to post.user.email, post.user %>
   <%= link_to post.content, post_path(post) %>
   Posted <%= time_ago_in_words(post.created_at) %> ago.
+
 </li>

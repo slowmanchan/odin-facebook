@@ -3,8 +3,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_many :comments
-  has_many :posts
+  has_many :likings, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :posts, dependent: :destroy
   has_many :active_relationships, class_name: "Relationship",
                                   foreign_key: "follower_id",
                                   dependent: :destroy
@@ -14,6 +15,7 @@ class User < ActiveRecord::Base
 
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
+
 
   def feed
     Post.where("user_id IN (?) OR user_id = ?", following_ids, id)

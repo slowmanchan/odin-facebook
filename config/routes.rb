@@ -1,20 +1,18 @@
 Rails.application.routes.draw do
   devise_for :users
 
-
   root 'static_pages#home'
-
 
   get '/about' => 'static_pages#about'
   resources :users do
     member do
       get :following, :followers
-
     end
   end
-  resources :posts
+  resources :posts, only: [:create, :show, :destroy]
   resources :relationships, only: [:create, :destroy]
-  resources :comments
+  resources :comments, only: [:create, :destroy]
+  resources :likings, only: [:create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

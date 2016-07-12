@@ -1,10 +1,6 @@
 class CommentsController < ApplicationController
-
-
-
-  def new
-  end
-
+  before_action :user_signed_in?
+  
   def create
     @post = Post.find(params[:comment][:post_id])
     @comment = @post.comments.build(comment_params)
@@ -13,12 +9,9 @@ class CommentsController < ApplicationController
       flash[:success] = "Your comment was posted!"
       redirect_to @post
     else
-      flash.now[:danger] = "Mistakes were made"
-      render @post
+      flash[:danger] = "Mistakes were made"
+      redirect_to @post
     end
-  end
-
-  def show
   end
 
   private
