@@ -23,6 +23,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @feed_items = @post.feed.paginate(params[:page])
   end
 
   def destroy

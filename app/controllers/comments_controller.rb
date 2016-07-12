@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+
+
+
   def new
   end
 
@@ -11,7 +14,7 @@ class CommentsController < ApplicationController
       redirect_to @post
     else
       flash.now[:danger] = "Mistakes were made"
-      render 'post'
+      render @post
     end
   end
 
