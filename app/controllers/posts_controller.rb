@@ -1,10 +1,19 @@
 class PostsController < ApplicationController
-  before_action :user_signed_in?
+  before_action :user_signed_in?, only: [:edit, :destroy]
 
-  def index
+  def edit
+    @post = Post.find(params[:id])
   end
 
-  def new
+  def update
+    @post = Post.find(params[:id])
+    if @post.update_attributes(post_params)
+      flash[:success] = "Edited!"
+      redirect_to root_url
+    else
+      flash.now[:danger] = "Mistakes were made"
+      render 'edit'
+    end
   end
 
   def create
@@ -18,15 +27,15 @@ class PostsController < ApplicationController
     end
   end
 
-  def update
-  end
-
   def show
     @post = Post.find(params[:id])
     @feed_items = @post.feed.paginate(page: params[:page])
   end
 
   def destroy
+    Post.find(params[:id]).destroy
+    flash[:success] = "Deleted!"
+    redirect_to root_path
   end
 
   private

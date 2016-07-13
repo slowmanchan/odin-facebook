@@ -7,26 +7,21 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 50.times do
-  User.create(email: Faker::Internet.email,
+  user = User.create(email: Faker::Internet.email,
               password: 'foobar')
+  20.times do
+    user.posts.create(content: Faker::Lorem.sentence)
+  end
 end
 
-20.times do
-  Post.create(user_id: 1,
-              content: Faker::Lorem.sentence)
-end
+admin = User.create(email: 'slowmanchan@gmail.com',
+            password: 'foobar')
 
-20.times do
-  Post.create(user_id: 2,
-              content: Faker::Lorem.sentence)
-end
+posts = Post.all
 
-20.times do
-  Post.create(user_id: 3,
-              content: Faker::Lorem.sentence)
-end
-
-20.times do
-  Post.create(user_id: 4,
-              content: Faker::Lorem.sentence)
+50.times do
+  post = admin.posts.create(content: Faker::Lorem.sentence)
+    posts.each do |post|
+      post.comments.create(content: Faker::Lorem.sentence, user_id: admin.id)
+    end
 end

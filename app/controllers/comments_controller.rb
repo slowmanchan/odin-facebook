@@ -1,5 +1,9 @@
 class CommentsController < ApplicationController
   before_action :user_signed_in?
+
+  def edit
+    @comment = Comment.find[params[:id]]
+  end
   
   def create
     @post = Post.find(params[:comment][:post_id])

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'omniauth-facebook'
 gem 'gravatar'
 gem 'will_paginate'
 gem 'faker'
