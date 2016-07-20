@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'sendgrid'
 gem 'omniauth-facebook'
 gem 'gravatar'
 gem 'will_paginate'
