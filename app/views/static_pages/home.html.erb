@@ -6,7 +6,22 @@
   <%= render 'shared/feed' %>
 
 <% else %>
-  <h1>Welcome to odin-facebook</h1>
-  <%= link_to 'Sign up', new_user_registration_path %>
-  <%= link_to 'Sign in with Facebook', user_facebook_omniauth_authorize_path %>
+
+  <div class="jumbotron background-tint">
+    <div class="container">
+
+      <%= image_tag "OBLOGO.png" %>
+      <h1>Welcome to odin-book</h1>
+      <p>
+        It's just like facebook but with no users, less features and zero user-support!
+      </p>
+
+      <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-default btn-lg" %>
+      <%= link_to 'Sign in with Facebook', user_facebook_omniauth_authorize_path, class: "btn btn-default btn-lg" %>
+
+      <p>Version 1.0.0</p>
+
+    </div>
+
+  </div>
 <% end %>

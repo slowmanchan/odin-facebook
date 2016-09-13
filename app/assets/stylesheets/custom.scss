@@ -1,0 +1,60 @@
+@import 'bootstrap';
+@import 'bootstrap-sprockets';
+
+$light-blue: #01579b;
+$light-grey: #f5f5f5;
+
+
+/* main-nav-bar */
+.navbar {
+  background-color: white;
+  margin-bottom: 0;
+}
+
+.nav.navbar-nav a, .navbar-brand {
+  color: $light-blue !important;
+  transition: all 0.3s;
+
+}
+.navbar-nav .active a {
+
+  background-color: $light-grey !important;
+}
+
+.navbar-nav a:hover {
+  background-color: $light-grey !important;
+}
+.jumbotron {
+  text-align: center;
+  background: image-url('friends.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  color: white;
+
+  h1 {
+    font-family: "Contrail one", sans-serif;
+    text-transform: uppercase;
+  }
+  img {
+    margin-top: 50px;
+    width: 100px;
+  }
+  p {
+     width: 80%;
+     margin: 0 auto;
+  }
+  & .btn {
+    background-color: transparent;
+    color: white;
+    transition: all 0.3s;
+    margin: 30px 0;
+  }
+  & .btn:hover {
+    background-color: white;
+    color: $light-blue;
+  }
+}
+.background-tint {
+  background-color: $light-blue; // Tint color
+  background-blend-mode: multiply;
+}
