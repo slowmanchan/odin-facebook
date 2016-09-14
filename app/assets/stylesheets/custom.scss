@@ -5,6 +5,9 @@ $light-blue: #01579b;
 $light-grey: #f5f5f5;
 $medium-grey: #757575;
 
+* {
+  font-family: 'Oxygen';
+}
 .background-tint {
   background-color: $light-blue !important; // Tint color
 
@@ -44,7 +47,9 @@ $medium-grey: #757575;
     // background-image: image-url('handwriting.jpeg');
     background-position: 50% 50%;
     background-size: cover;
-
+    & .headline {
+      padding-left: 0;
+    }
   }
 
 
@@ -82,7 +87,7 @@ footer.site-footer{
   color: $medium-grey;
   border-top: 1px solid #bdbdbd;
   & .site-descript {
-    width: 20%;
+
     margin: 0 auto;
     padding: 20px 0px;
   }
@@ -112,6 +117,13 @@ footer.site-footer{
       color: $light-blue;
 
     }
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  .jumbotron {
+    text-align: center;
   }
 
 }
