@@ -7,9 +7,10 @@
 
 <% else %>
 
-  <div class="jumbotron background-tint">
-    <div class="container">
+  <div class="jumbotron home-page background-tint ">
 
+    <div class="container">
+      
       <%= image_tag "OBLOGO.png" %>
       <h1>Welcome to odin-book</h1>
       <p>
@@ -19,9 +20,9 @@
       <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-default btn-lg" %>
       <%= link_to 'Sign in with Facebook', user_facebook_omniauth_authorize_path, class: "btn btn-default btn-lg" %>
 
-      <p>Version 1.0.0</p>
+      <p id="version">Version 1.0.0</p>
 
     </div>
-
+  </div>
   </div>
 <% end %>

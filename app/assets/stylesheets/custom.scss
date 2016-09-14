@@ -3,8 +3,13 @@
 
 $light-blue: #01579b;
 $light-grey: #f5f5f5;
+$medium-grey: #757575;
 
+.background-tint {
+  background-color: $light-blue !important; // Tint color
 
+  background-blend-mode: multiply;
+}
 /* main-nav-bar */
 .navbar {
   background-color: white;
@@ -25,11 +30,23 @@ $light-grey: #f5f5f5;
   background-color: $light-grey !important;
 }
 .jumbotron {
-  text-align: center;
-  background: image-url('friends.jpg');
-  background-position: 50% 50%;
-  background-size: cover;
+
   color: white;
+
+  &.home-page {
+    text-align: center;
+    background: image-url('friends.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  &.about-us {
+
+    // background-image: image-url('handwriting.jpeg');
+    background-position: 50% 50%;
+    background-size: cover;
+
+  }
+
 
   h1 {
     font-family: "Contrail one", sans-serif;
@@ -39,10 +56,7 @@ $light-grey: #f5f5f5;
     margin-top: 50px;
     width: 100px;
   }
-  p {
-     width: 80%;
-     margin: 0 auto;
-  }
+
   & .btn {
     background-color: transparent;
     color: white;
@@ -53,8 +67,51 @@ $light-grey: #f5f5f5;
     background-color: white;
     color: $light-blue;
   }
+  #version {
+    font-size: 80%;
+    padding-bottom: 30px;
+  }
 }
-.background-tint {
-  background-color: $light-blue; // Tint color
-  background-blend-mode: multiply;
+
+
+
+/* footer */
+footer.site-footer{
+  text-align: center ;
+  padding: 50px;
+  color: $medium-grey;
+  border-top: 1px solid #bdbdbd;
+  & .site-descript {
+    width: 20%;
+    margin: 0 auto;
+    padding: 20px 0px;
+  }
+}
+// // .list-group {
+// //   border-radius: none;
+// // }
+// // .side-nav .list-group a {
+// //
+// //   border: none;
+// //   color: $medium-grey;
+//
+//   &:hover {
+//     border-left: 1px solid $light-blue;
+//   }
+.vertical-nav {
+  margin-top: 20px;
+  list-style: none;
+  a {
+    display: inline-block;
+    color: $medium-grey;
+    padding: 5px 15px;
+    border: 1px solid transparent;
+    &:hover {
+      text-decoration: none;
+      border-left: 1px solid $light-blue;
+      color: $light-blue;
+
+    }
+  }
+
 }
