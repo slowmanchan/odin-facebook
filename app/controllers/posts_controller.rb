@@ -29,7 +29,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @feed_items = @post.feed.paginate(page: params[:page])
+    @feed_items = @post.feed.paginate(page: params[:page], :per_page => 10)
   end
 
   def destroy

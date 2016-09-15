@@ -1,10 +1,20 @@
 <% if user_signed_in? %>
-  <%= render 'shared/user_info' %>
-  <%= render 'shared/stats' %>
-  <%= render 'shared/posts' %>
-  <h1>Posts(<%= @feed_items.count %>)</h1>
-  <%= render 'shared/feed' %>
+<div class="blue-background">
+  <div class="jumbotron background-tint user-info text-center" >
+    <div class="container">
+      <%= render 'shared/user_info' %>
+      <%= render 'shared/stats' %>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="container list-unstyled">
+      <h1 class="text-center">Posts(<%= @feed_items.count %>)</h1>
+      <%= render 'shared/feed' %>
+      <%= render 'shared/posts' %>
+    </div>
+  </div>
+</div>
 <% else %>
 
   <div class="jumbotron home-page background-tint ">

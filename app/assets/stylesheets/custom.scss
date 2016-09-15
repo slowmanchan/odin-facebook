@@ -1,10 +1,11 @@
 @import 'bootstrap';
 @import 'bootstrap-sprockets';
 
+$lighter-blue: #e3f2fd;
 $light-blue: #01579b;
 $light-grey: #f5f5f5;
 $medium-grey: #757575;
-
+$darker-grey: #424242;
 * {
   font-family: 'Oxygen';
 }
@@ -35,6 +36,7 @@ $medium-grey: #757575;
 .jumbotron {
 
   color: white;
+
 
   &.home-page {
     text-align: center;
@@ -140,4 +142,29 @@ footer.site-footer{
 }
 .alert {
   margin: 0;
+}
+.feed {
+
+  padding: 30px;
+  a {
+    color: $medium-grey;
+  }
+}
+.post {
+  a {
+    color: $darker-grey;
+  }
+
+}
+
+.blue-background {
+  background-color: $lighter-blue;
+}
+.round img{
+  border-radius: 50%;
+
+}
+.stats {
+  color: white;
+  
 }

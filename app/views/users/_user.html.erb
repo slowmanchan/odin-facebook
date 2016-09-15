@@ -1,4 +1,7 @@
-<li>
-  <%= gravatar_for(user) %>
-  <%= link_to user.email, user %>
-</li>
+
+<div class="thumbnail col-md-4 list-unstyled text-center">
+  <li>
+    <%= gravatar_for(user) %>
+    <p><%= link_to user.email, user %></p>
+  </li>
+</div>
