@@ -1,15 +1,15 @@
 <div class="blue-background">
-<div class="jumbotron background-tint user-info text-center">
-  <div class="container">
-    <%= render 'shared/user_info' %>
-    <%= render 'shared/stats' %>
+  <div class="jumbotron background-tint user-info text-center">
+    <div class="container">
+      <%= render 'shared/user_info' %>
+      <%= render 'shared/stats' %>
+    </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="list-unstyled">
-    <%= render 'shared/feed'%>
+  <div class="container">
+    <div class="list-unstyled">
+      <%= render 'shared/feed'%>
+    </div>
   </div>
-</div>
 </div>
 <%= render 'follow_form' if user_signed_in? %>

@@ -4,14 +4,18 @@
     <div class="container">
       <%= render 'shared/user_info' %>
       <%= render 'shared/stats' %>
+
     </div>
   </div>
 
   <div class="row">
     <div class="container list-unstyled">
+      <div class="text-center">
+        <%= render 'shared/posts' %>
+      </div>
       <h1 class="text-center">Posts(<%= @feed_items.count %>)</h1>
+      <br/>
       <%= render 'shared/feed' %>
-      <%= render 'shared/posts' %>
     </div>
   </div>
 </div>
@@ -28,11 +32,54 @@
       </p>
 
       <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-default btn-lg" %>
-      <%= link_to 'Sign in with Facebook', user_facebook_omniauth_authorize_path, class: "btn btn-default btn-lg" %>
 
+      <p>have an account? <%= link_to 'Sign in', new_user_session_path %></p>
       <p id="version">Version 1.0.0</p>
-
     </div>
   </div>
   </div>
+  <div class='featurette'>
+  <div class="row">
+    <div class="container text-center">
+      <h1 class='lead-heading'>Designed for no one, no where!</h1>
+      <p class='sub-heading'>This app is a watered down version of facebook.  Its ment for training purposes only! If you like it, then great! If not well.. that's great too!</p>
+      <hr class='half-rule'>
+    </div>
+  </div>
+  <div class="row">
+    <div class="container text-center">
+      <div class="panel-info col-md-4 col-xs-12">
+        <%= image_tag "oauth.png" %>
+        <h3>Authentication</h3>
+        <p>This site is secured using the <%= link_to 'devise', 'https://github.com/plataformatec/devise' %> gem as well as <%= link_to 'oauth', 'https://github.com/pelle/oauth' %> for facebook authentication.  Create an account and you'll be able to make posts, view and follow other users and comment on their posts!</p>
+      </div>
+      <div class="panel-info col-md-4 col-xs-12">
+        <%= image_tag "rails.png" %>
+        <h3>Ruby on Rails</h3>
+        <p>ajsdlfakslfjkdjf</p>
+      </div>
+      <div class="panel-info col-md-4 col-xs-12">
+        <%= image_tag "bootstrap.png" %>
+        <h3>Bootstrap</h3>
+        <p>sjdlfdkfdjf</p>
+      </div>
+
+
+
+  </div>
+
+</div>
+  <div class="row">
+    <div class="container text-center">
+      <hr class='half-rule'>
+
+      <p class="sub-heading">There is only one Odin-book and this is it.  The Odiniest and the bookiest.</p>
+      <button class="btn btn-default btn-lg">
+        <%= link_to 'View on Github', 'https://github.com/slowmanchan/odin-facebook'%>
+      </button>
+    </div>
+  </div>
+</div>
 <% end %>
+
+<!-- <%= link_to 'Sign in with Facebook', user_facebook_omniauth_authorize_path, class: "btn btn-default btn-lg" %> -->

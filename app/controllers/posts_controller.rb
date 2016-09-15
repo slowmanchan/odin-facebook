@@ -18,10 +18,12 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.build(post_params)
+    @user = current_user
     if @post.save
       flash[:success] = "Posted!"
       redirect_to root_url
     else
+      flash.now[:danger] = "Mistakes were made"
       @feed_items = []
       render 'static_pages/home'
     end

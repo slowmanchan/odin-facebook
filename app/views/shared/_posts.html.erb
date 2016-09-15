@@ -1,5 +1,8 @@
+<div class="user-form">
 <%= form_for(@post) do |f| %>
-  <%= f.label(:content) %>
-  <%= f.text_area(:content) %>
-  <%= f.submit %>
+  <%= f.hidden_field(:content) %>
+  <%= f.text_area :content, placeholder: "Write stuff here" %>
+  <br/>
+  <%= f.submit 'Post', class: 'btn btn-default btn-lg' %>
 <% end %>
+</div>

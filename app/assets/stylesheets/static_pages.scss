@@ -1,3 +1,35 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* home-page */
+@import 'custom';
+
+.featurette {
+  padding: 100px 0;
+}
+.lead-heading {
+  font-weight: bolder;
+  font-size: 300%;
+
+}
+.sub-heading {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 140%;
+
+  color: $darker-grey;
+}
+.half-rule {
+  width: 80px;
+  margin: 40px auto;
+}
+.panel-info {
+  p {
+  color: $darker-grey;
+  }
+  img {
+    width: 300px;
+    height: 113px;
+  }
+}

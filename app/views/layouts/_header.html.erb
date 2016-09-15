@@ -13,7 +13,7 @@
 
       <div class="collapse navbar-collapse" id="navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active">
+          <li>
             <%= link_to 'Home', root_path %>
           </li>
           <% if user_signed_in? %>
@@ -32,10 +32,10 @@
 
           </ul>
             <p class="navbar-text navbar-right">Signed in as: <%= link_to current_user.email, current_user %></p>
-          <% else %>
-              <li><%= link_to 'Sign in', new_user_session_path %></li>
+
+    
           <% end %>
-            
+
       </div>
     </div>
   </div>
