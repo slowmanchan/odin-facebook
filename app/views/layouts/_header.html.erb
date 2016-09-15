@@ -8,7 +8,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Odin-Book</a>
+        <%= link_to "Odin-Book", root_path, class: "navbar-brand" %>
       </div>
 
       <div class="collapse navbar-collapse" id="navbar-collapse-1">
@@ -35,9 +35,7 @@
           <% else %>
               <li><%= link_to 'Sign in', new_user_session_path %></li>
           <% end %>
-              <li><%= link_to 'About', about_path %></li>
-
-
+            
       </div>
     </div>
   </div>

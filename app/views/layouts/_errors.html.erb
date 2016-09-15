@@ -1,5 +1,15 @@
+
 <% if flash.any? %>
   <% flash.each do |error, msg| %>
+  <% if error == "notice" %>
+  <div class="alert alert-success text-center">
     <%= msg %>
+  </div>
+  <% else %>
+  <div class="alert alert-danger text-center">
+    <%= msg %>
+  </div>
+  <% end %>
+
   <% end %>
 <% end %>
