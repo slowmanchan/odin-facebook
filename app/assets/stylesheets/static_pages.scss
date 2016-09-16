@@ -7,6 +7,7 @@
 
 .featurette {
   padding: 100px 0;
+  border-bottom: 1px solid $light-grey;
 }
 .lead-heading {
   font-weight: bolder;
@@ -15,8 +16,9 @@
 }
 .sub-heading {
   width: 70%;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
   font-size: 140%;
+
 
   color: $darker-grey;
 }
@@ -32,4 +34,17 @@
     width: 300px;
     height: 113px;
   }
+}
+.carousel {
+  padding: 0;
+  float: left;
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.image-carousel {
+  display: inline-block;
+  margin: auto;
 }

@@ -1,13 +1,12 @@
 <% if user_signed_in? %>
+
 <div class="blue-background">
   <div class="jumbotron background-tint user-info text-center" >
     <div class="container">
       <%= render 'shared/user_info' %>
       <%= render 'shared/stats' %>
-
     </div>
   </div>
-
   <div class="row">
     <div class="container list-unstyled">
       <div class="text-center">
@@ -19,26 +18,21 @@
     </div>
   </div>
 </div>
+
 <% else %>
 
-  <div class="jumbotron home-page background-tint ">
-
-    <div class="container">
-
-      <%= image_tag "OBLOGO.png" %>
-      <h1>Welcome to odin-book</h1>
-      <p>
-        It's just like facebook but with no users, less features and zero user-support!
-      </p>
-
-      <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-default btn-lg" %>
-
-      <p>have an account? <%= link_to 'Sign in', new_user_session_path %></p>
-      <p id="version">Version 1.0.0</p>
-    </div>
+<div class="jumbotron home-page background-tint ">
+  <div class="container">
+    <%= image_tag "OBLOGO.png" %>
+    <h1>Welcome to odin-book</h1>
+    <p>It's just like facebook but with no users, less features and zero user-support!</p>
+    <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-default btn-lg" %>
+    <p>have an account? <%= link_to 'Sign in', new_user_session_path %></p>
+    <p id="version">Version 1.0.0</p>
   </div>
-  </div>
-  <div class='featurette'>
+</div>
+
+<div class='featurette'>
   <div class="row">
     <div class="container text-center">
       <h1 class='lead-heading'>Designed for no one, no where!</h1>
@@ -56,23 +50,18 @@
       <div class="panel-info col-md-4 col-xs-12">
         <%= image_tag "rails.png" %>
         <h3>Ruby on Rails</h3>
-        <p>ajsdlfakslfjkdjf</p>
+        <p>Rails is the framework of choice for this masterful piece of art!  I showcase the many facets of the MVC design pattern as well as basic CRUD commands such as creating, reading, updating and destroying posts, users and comments.</p>
       </div>
       <div class="panel-info col-md-4 col-xs-12">
         <%= image_tag "bootstrap.png" %>
         <h3>Bootstrap</h3>
-        <p>sjdlfdkfdjf</p>
+        <p>Styled with the popular boostrap framework and grid system, designing the site was a cinch.  The site highlights the many componants available in bootstrap including buttons, dropdowns and more!</p>
       </div>
-
-
-
+    </div>
   </div>
-
-</div>
   <div class="row">
     <div class="container text-center">
       <hr class='half-rule'>
-
       <p class="sub-heading">There is only one Odin-book and this is it.  The Odiniest and the bookiest.</p>
       <button class="btn btn-default btn-lg">
         <%= link_to 'View on Github', 'https://github.com/slowmanchan/odin-facebook'%>
@@ -80,6 +69,32 @@
     </div>
   </div>
 </div>
-<% end %>
 
-<!-- <%= link_to 'Sign in with Facebook', user_facebook_omniauth_authorize_path, class: "btn btn-default btn-lg" %> -->
+<div class="featurette text-center">
+  <div class="row">
+    <div class="container text-center">
+      <h1 class="lead-heading">Powered by Ruby on Rails</h1>
+      <p class="sub-heading">Just like many other popular sites out there</p>
+      <hr class="half-rule">
+    </div>
+    <div class="row">
+      <div class="container-fluid">
+        <ul class="list-unstyled image-carousel">
+          <li class="carousel"><%= image_tag "shopify.jpg" %></li>
+          <li class="carousel"><%= image_tag "groupon.jpg" %></li>
+          <li class="carousel"><%= image_tag "airbnb.jpg" %></li>
+          <li class="carousel"><%= image_tag "github.jpg" %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr class="half-rule">
+  <div class="row">
+    <p class="sub-heading">I own none of these projects, but they are amazing</p>
+    <button class="btn btn-default btn-lg">
+      <%= link_to "Nothing" %>
+    </button>
+  </div>
+</div>
+
+<% end %>
