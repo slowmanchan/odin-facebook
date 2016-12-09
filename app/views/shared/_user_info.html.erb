@@ -1,7 +1,8 @@
 
-
+<div class="user-info">
 <% provide(:title, @user.email) %>
 <h3><%= @user.email %></h3>
 <div class="round">
   <%= gravatar_for(@user) %>
+</div>
 </div>
