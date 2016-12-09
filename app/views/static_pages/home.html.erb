@@ -1,47 +1,56 @@
 <% if user_signed_in? %>
 
-<div class="blue-background">
-  <div class="jumbotron background-tint user-info text-center" >
-    <div class="container">
-      <%= render 'shared/user_info' %>
-      <%= render 'shared/stats' %>
-    </div>
+<div class="jumbotron user-info text-center" >
+  <div class="container">
+    <%= render 'shared/user_info' %>
+    <%= render 'shared/stats' %>
   </div>
+</div>
+<div class="container">
   <div class="row">
-    <div class="container list-unstyled">
+    <div class="list-unstyled">
       <div class="text-center">
-        <%= render 'shared/posts' %>
+        <!-- <%= render 'shared/posts' %> -->
       </div>
       <h1 class="text-center">Posts(<%= @feed_items.count %>)</h1>
       <br/>
-      <%= render 'shared/feed' %>
+      <!-- <%= render 'shared/feed' %> -->
     </div>
   </div>
 </div>
 
 <% else %>
 
-<div class="jumbotron home-page background-tint ">
+<div class="jumbotron home-page">
   <div class="container">
     <%= image_tag "OBLOGO.png" %>
     <h1>Welcome to odin-book</h1>
-    <p>It's just like facebook but with no users, less features and zero user-support!</p>
+    <p>
+      It's just like facebook but with no users, less features and zero user-support!
+    </p>
     <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-default btn-lg" %>
-    <p>have an account? <%= link_to 'Sign in', new_user_session_path %></p>
+    <p>
+      have an account? <%= link_to 'Sign in', new_user_session_path %>
+    </p>
     <p id="version">Version 1.0.0</p>
   </div>
 </div>
 
 <div class='featurette'>
-  <div class="row">
-    <div class="container text-center">
-      <h1 class='lead-heading'>Designed for no one, no where!</h1>
-      <p class='sub-heading'>This app is a watered down version of facebook.  Its ment for training purposes only! If you like it, then great! If not well.. that's great too!</p>
+  <div class="container text-center">
+    <div class="row">
+      <h1 class='lead-heading'>
+        Designed for no one, no where!
+      </h1>
+      <p class='sub-heading'>
+        This app is a watered down version of facebook.  Its ment for training purposes only! If you like it, then great! If not well.. that's great too!
+      </p>
       <hr class='half-rule'>
     </div>
   </div>
-  <div class="row">
-    <div class="container text-center">
+
+  <div class="container text-center">
+    <div class="row">
       <div class="panel-info col-md-4 col-xs-12">
         <%= image_tag "oauth.png" %>
         <h3>Authentication</h3>
@@ -59,8 +68,8 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="container text-center">
+  <div class="container text-center">
+    <div class="row">
       <hr class='half-rule'>
       <p class="sub-heading">There is only one Odin-book and this is it.  The Odiniest and the bookiest.</p>
       <button class="btn btn-default btn-lg">
@@ -71,14 +80,16 @@
 </div>
 
 <div class="featurette text-center">
-  <div class="row">
-    <div class="container text-center">
+  <div class="container text-center">
+    <div class="row">
+
       <h1 class="lead-heading">Powered by Ruby on Rails</h1>
       <p class="sub-heading">Just like many other popular sites out there</p>
       <hr class="half-rule">
     </div>
-    <div class="row">
-      <div class="container-fluid">
+    <div class="container-fluid">
+      <div class="row">
+
         <ul class="list-unstyled image-carousel">
           <li class="carousel"><%= image_tag "shopify.jpg" %></li>
           <li class="carousel"><%= image_tag "groupon.jpg" %></li>
@@ -89,12 +100,13 @@
     </div>
   </div>
   <hr class="half-rule">
-  <div class="row">
-    <p class="sub-heading">I own none of these projects, but they are amazing</p>
-    <button class="btn btn-default btn-lg">
-      <%= link_to "Nothing" %>
-    </button>
+  <div class="container">
+    <div class="row">
+      <p class="sub-heading">I own none of these projects, but they are amazing</p>
+      <button class="btn btn-default btn-lg">
+        <%= link_to "Nothing" %>
+      </button>
+    </div>
   </div>
 </div>
-
 <% end %>

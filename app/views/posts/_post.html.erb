@@ -2,26 +2,26 @@
 <div class="col-md-6">
   <div class="thumbnail">
     <div class="container post">
-   <li>
+      <li>
 
-  <p><%= link_to post.user.email, post.user %></p>
-  <p>Posted <%= time_ago_in_words(post.created_at) %> ago.</p>
-  <%= link_to post.content, post_path(post) %>
+        <p><%= link_to post.user.email, post.user %></p>
+        <p>Posted <%= time_ago_in_words(post.created_at) %> ago.</p>
+        <%= link_to post.content, post_path(post) %>
 
-  <% if current_user.id == post.user.id %>
-    <p>
-      <%= link_to "Edit", edit_post_path(post), class: "btn btn-default"%>
+        <% if current_user.id == post.user.id %>
+        <p>
+          <%= link_to "Edit", edit_post_path(post), class: "btn btn-default"%>
 
 
-    <%= link_to "Delete", post, method: :delete,
-                                data: { confirm: "You sure?" }, class: "btn btn-default" %>
+          <%= link_to "Delete", post, method: :delete,
+          data: { confirm: "You sure?" }, class: "btn btn-default" %>
 
-    </p>
+        </p>
 
-  <% end %>
+        <% end %>
 
-</li>
+      </li>
 
-</div>
-</div>
+    </div>
+  </div>
 </div>
