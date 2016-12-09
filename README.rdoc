@@ -1,3 +1,3 @@
 ODIN BOOK
 
-A simple clone of facebook that highlights my development skill in ruby and rails, html, css and bootstrap.
+A simple clone of twitter that highlights my development skill in ruby and rails, html, css and bootstrap.
