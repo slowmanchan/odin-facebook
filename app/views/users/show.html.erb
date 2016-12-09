@@ -4,8 +4,11 @@
       <div class="panel user-info">
         <%= render 'shared/user_info' %>
         <%= render 'shared/stats' %>
-      </div>
+        <%= render 'follow_form' if user_signed_in? %>
 
+      </div>
+      <div class="panel comment-form">
+      </div>
     </div>
 
     <div class="col-lg-9">
@@ -18,4 +21,3 @@
     </div>
   </div>
 </div>
-<%= render 'follow_form' if user_signed_in? %>

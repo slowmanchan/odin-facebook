@@ -1,6 +1,5 @@
-<li>
+<li class="list-group-item">
   <%= comment.content %><br>
-  <%= link_to comment.user.email, comment.user %>
-
-  Posted <%= time_ago_in_words(comment.created_at) %> ago
+  <%= link_to comment.user.email, comment.user %><br>
+  <date>Posted <%= time_ago_in_words(comment.created_at) %> ago</date>
 </li>

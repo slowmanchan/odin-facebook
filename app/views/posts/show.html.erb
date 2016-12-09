@@ -1,15 +1,32 @@
-<h2><%= @post.content %></h2>
-<%= link_to @post.user.email, @post.user %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="panel post">
+        <h3><%= @post.content %></h3>
+        <p>
+          <%= link_to @post.user.email, @post.user %>
+        </p>
+        <p>
+          Likes: <%= @post.likings.count %>
+        </p>
+        <% if liking? %>
+        <%= render 'likings/unlike_form' %>
+        <% else %>
+        <%= render 'likings/like_form' %>
+        <% end %>
+      </div>
 
-<% if liking? %>
-  <%= render 'likings/unlike_form' %>
-<% else %>
-  <%= render 'likings/like_form' %>
-<% end %>
-
-
-Likes: <%= @post.likings.count %>
-<%= render 'shared/comments_form' %>
-
-<h1>Comments(<%= @post.comments.count %>)</h1>
-<%= render 'shared/feed' %>
+      <div class="panel post">
+        <%= render 'shared/comments_form' %>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="panel comments">
+        <h1>Comments(<%= @post.comments.count %>)</h1>
+        <ul class="list-group">
+          <%= render 'shared/feed' %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

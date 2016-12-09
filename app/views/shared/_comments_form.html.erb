@@ -1,5 +1,6 @@
 <%= form_for(:comment, url: '/comments', method: :post) do |f| %>
   <%= f.hidden_field :post_id, :value => @post.id %>
-  <%= f.text_area :content %>
-  <%= f.submit "Comment" %>
+  <%= f.text_area :content,placeholder: "tell us your story..." %>
+  <br>
+  <%= f.submit "post", class: 'btn btn-default'%>
 <% end %>

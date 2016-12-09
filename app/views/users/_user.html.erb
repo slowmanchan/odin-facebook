@@ -1,7 +1,10 @@
-
-<div class="thumbnail col-md-4 list-unstyled text-center">
-  <li>
-    <%= gravatar_for(user) %>
-    <h4><%= link_to user.email, user %></h4>
-  </li>
+<div class="col-lg-4">
+  <div class="panel list-unstyled text-center">
+    <li>
+      <div class="panel-body">
+      <%= gravatar_for(user) %>
+       <p><%= link_to user.email, user %></p>
+     </div>
+    </li>
+  </div>
 </div>

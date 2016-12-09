@@ -10,8 +10,8 @@ $darker-grey: #424242;
   font-family: 'Oxygen';
 }
 body {
-   background-color: $light-grey;
- }
+  background-color: $light-grey;
+}
 .background-tint {
   background-color: $light-blue !important; // Tint color
   background-blend-mode: multiply;
@@ -110,16 +110,16 @@ footer.site-footer{
 .user-info {
   background-color: $light-blue;
   padding: 20px;
+  text-align: center;
+
   h3 {
     word-wrap: break-word;
     color: white;
-
     font-weight: bold;
   }
   a {
     color: white;
   }
-
 }
 
 /* form */
@@ -134,7 +134,7 @@ footer.site-footer{
   .form-input {
     color: $medium-grey;
     input {
-        width: 400px;
+      width: 400px;
     }
   }
 }
@@ -173,6 +173,10 @@ footer.site-footer{
   a {
     color: $darker-grey;
   }
+  textarea {
+    width: 100%;
+    height: 150px;
+  }
 
 }
 //headings
@@ -181,14 +185,35 @@ footer.site-footer{
   font-weight: bold;
   color: $light-blue;
 }
-.blue-background {
-  background-color: $lighter-blue;
-}
+
 .round img{
   border-radius: 50%;
   width: 100px;
+  border: 4px solid white;
 }
 .stats {
   color: white;
 
+}
+//comments form
+.comment-form {
+  padding: 20px;
+  background-color: $light-blue;
+  text-align: center;
+
+  textarea {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+  }
+}
+//comments panel
+.comments {
+  background-color: $light-blue;
+
+  h1 {
+    padding-left: 15px;
+    color: white;
+    font-weight: bold;
+  }
 }

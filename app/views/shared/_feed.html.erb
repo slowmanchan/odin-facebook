@@ -2,8 +2,8 @@
 
 
 <% if @feed_items.any? %>
-  <%= render @feed_items %>
-  <div class="">
-    <%= will_paginate @feed_items %>
-  </div>
+<%= render @feed_items %>
+<div>
+<%= will_paginate @feed_items %>
+</div>
 <% end %>
