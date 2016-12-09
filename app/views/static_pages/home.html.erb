@@ -1,23 +1,25 @@
 <% if user_signed_in? %>
-
-<div class="jumbotron user-info text-center" >
-  <div class="container">
-    <%= render 'shared/user_info' %>
-    <%= render 'shared/stats' %>
-  </div>
-</div>
 <div class="container">
   <div class="row">
-    <div class="list-unstyled">
-      <div class="text-center">
-        <!-- <%= render 'shared/posts' %> -->
+    <div class="col-lg-3">
+      <div class="panel user-info">
+        <%= render 'shared/user_info' %>
+        <%= render 'shared/stats' %>
       </div>
-      <h1 class="text-center">Posts(<%= @feed_items.count %>)</h1>
-      <br/>
-      <!-- <%= render 'shared/feed' %> -->
+
+    </div>
+
+    <div class="col-lg-9">
+      <div class="panel">
+        <h1 class="heading-panel">Latest Posts (<%= @feed_items.count %>)</h1>
+      </div>
+      <div class="list-unstyled">
+        <%= render 'shared/feed'%>
+      </div>
     </div>
   </div>
 </div>
+<%= render 'users/follow_form' if user_signed_in? %>
 
 <% else %>
 

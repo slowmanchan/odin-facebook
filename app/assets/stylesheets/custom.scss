@@ -9,6 +9,9 @@ $darker-grey: #424242;
 * {
   font-family: 'Oxygen';
 }
+body {
+   background-color: $light-grey;
+ }
 .background-tint {
   background-color: $light-blue !important; // Tint color
   background-blend-mode: multiply;
@@ -16,7 +19,6 @@ $darker-grey: #424242;
 /* main-nav-bar */
 .navbar {
   background-color: white;
-  margin-bottom: 0;
 }
 
 .nav.navbar-nav a, .navbar-brand {
@@ -104,7 +106,21 @@ footer.site-footer{
   }
 
 }
+/* user info */
+.user-info {
+  background-color: $light-blue;
+  padding: 20px;
+  h3 {
+    word-wrap: break-word;
+    color: white;
 
+    font-weight: bold;
+  }
+  a {
+    color: white;
+  }
+
+}
 
 /* form */
 .user-form {
@@ -144,18 +160,33 @@ footer.site-footer{
   }
 }
 .post {
+  padding: 20px;
+  & .user-title {
+    font-weight: bold;
+  }
+  & .date {
+    color: $light-blue;
+  }
+  p {
+    word-wrap: break-word;
+  }
   a {
     color: $darker-grey;
   }
 
 }
-
+//headings
+.heading-panel {
+  padding-left: 15px;
+  font-weight: bold;
+  color: $light-blue;
+}
 .blue-background {
   background-color: $lighter-blue;
 }
 .round img{
   border-radius: 50%;
-
+  width: 100px;
 }
 .stats {
   color: white;

@@ -1,14 +1,20 @@
-<div class="blue-background">
-  <div class="jumbotron background-tint user-info text-center">
-    <div class="container">
-      <%= render 'shared/user_info' %>
-      <%= render 'shared/stats' %>
-    </div>
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="panel user-info">
+        <%= render 'shared/user_info' %>
+        <%= render 'shared/stats' %>
+      </div>
 
-  <div class="container">
-    <div class="list-unstyled">
-      <%= render 'shared/feed'%>
+    </div>
+
+    <div class="col-lg-9">
+      <div class="panel">
+        <h1 class="heading-panel">Latest Posts</h1>
+      </div>
+      <div class="list-unstyled">
+        <%= render 'shared/feed'%>
+      </div>
     </div>
   </div>
 </div>
