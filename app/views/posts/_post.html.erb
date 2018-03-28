@@ -1,6 +1,6 @@
 
-<div class="col-md-4">
-  <div class="thumbnail post">
+<div class="col-md-4" style='margin-right: -4px; display: inline-block; float: none'>
+<div class="thumbnail post">
     <p class="user-title"><%= link_to post.user.email, post.user %></p>
     <p class="date">Posted <%= time_ago_in_words(post.created_at) %> ago.</p>
     <p><%= link_to post.content, post_path(post) %>
@@ -12,5 +12,5 @@
       data: { confirm: "You sure?" }, class: "btn btn-default" %>
     </p>
     <% end %>
-  </div>
+</div>
 </div>

@@ -18,7 +18,7 @@ default: &default
   adapter: postgresql
   encoding: unicode
   database: odin-facebook_development
-  username: norman
+  username: normanchan
   password: foobar
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
@@ -32,7 +32,7 @@ test:
   adapter: postgresql
   encoding: unicode
   database: odin-facebook
-  username: norman  
+  username: norman
   password: foobar
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
